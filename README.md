@@ -1,10 +1,11 @@
-Testing Require.js code with Karma
+Example setup with Karma, Grunt, Jasmine, Require.js, JQuery, Underscore
 ==================================
 
-To get Karma to run with [Require.js] we need two files:
+To get Grunt to run Karma to run with [Require.js] we need two files:
 
 * `karma.conf.js` &mdash; which configures Karma
 * `test-main.js` &mdash; which configures Require.js for the tests
+* `Gruntfile.js` &mdash; which configures Grunt to run the tests 
 
 Let's say our app has a directory structure which looks something like
 this:
@@ -28,7 +29,28 @@ $ tree
 3 directories, 9 files
 ```
 
-## Configure Karma
+## Quick Setup and Run 
+
+Checkout the code by cloning the repository 
+
+```bash
+$ git clone https://github.com/kjbekkelund/karma-requirejs.git
+```
+
+Install all required NodeJS modules by running  
+```bash
+$ npm install
+```
+
+Run the tests by Grunt 
+```bash
+$ grunt 
+```
+
+ 
+
+
+## Explanation of what was to for Configure Karma
 
 The first step is creating our `karma.conf.js`. We can do this in the
 terminal by running:
@@ -102,7 +124,7 @@ tests to be the same folder as the base url we have in `src/main.js`, so
 that relative requires in the source won’t need to change. So, as we
 want our base url to be at `src/`, we need to write `/base/src`.
 
-### Require Each Test File
+### Explanation of what was to for Require Each Test File
 
 With Karma we don't need to list all test files ourselves as we can
 easily find them from the files specified in `test-main.js`: Karma
@@ -144,7 +166,7 @@ requirejs.config({
 });
 ```
 
-## Using Require.js in tests
+## Explanation of what was to for Using Require.js in tests
 
 Tests can now be written as regular Require.js modules. We wrap
 everything in `define`, and inside we can use the regular test methods,
@@ -174,32 +196,12 @@ define(['app', 'jquery', 'underscore'], function(App, $, _) {
 });
 ```
 
-## Running the tests
-
-Install Karma:
-
-```bash
-$ npm install -g karma
-```
-
-Now we can run the tests with:
-
-```bash
-$ karma start
-```
-
-If you didn't configure to watch all the files and run tests
-automatically on any change, you can trigger the tests manually by
-typing:
-
-```bash
-$ karma run
-```
-
----
-
 Based on Jake Trent's [post], with some improvements on `shims` and so
 on.
 
 [Require.js]: http://requirejs.org/
+[Grunt]: http://gruntjs.com/
+[Karma]: http://karma-runner.github.io/0.12/index.html
+[Jasmine]: http://jasmine.github.io/2.0/introduction.html
+
 [post]: http://jaketrent.com/post/test-requirejs-testacular/
