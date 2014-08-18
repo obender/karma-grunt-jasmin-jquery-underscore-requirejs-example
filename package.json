@@ -1,6 +1,6 @@
 {
   "name": "karma-grunt-jasmine-jquery-underscore-requirejs-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Example setup with Karma, Grunt, Jasmine, Require.js, JQuery, Underscore",
   "main": "Gruntfile.js",
   "directories": {

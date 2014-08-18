@@ -50,6 +50,13 @@ $ grunt
 And Wahalla :-) , you got it working 
 
 ![alt tag](https://raw.githubusercontent.com/obender/karma-grunt-jasmin-jquery-underscore-requirejs-example/master/img/working.png)
+
+If you are behind a Corporate Proxy Use
+
+```bash
+$ npm config set proxy http://proxy.company.com:8080
+$ npm config set https-proxy http://proxy.company.com:8080
+```
  
 ## Explanation of what was done to for Configure Karma
 
