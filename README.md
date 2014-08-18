@@ -48,6 +48,7 @@ $ grunt
 ```
 
 And Wahalla :-) , you got it working 
+
 ![alt tag](https://raw.githubusercontent.com/obender/karma-grunt-jasmin-jquery-underscore-requirejs-example/master/img/working.png)
  
 ## Explanation of what was done to for Configure Karma
