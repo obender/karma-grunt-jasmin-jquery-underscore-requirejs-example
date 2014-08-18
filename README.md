@@ -47,10 +47,10 @@ Run the tests by Grunt
 $ grunt 
 ```
 
+And Wahalla :-) , you got it working 
+![alt tag](https://raw.githubusercontent.com/obender/karma-grunt-jasmin-jquery-underscore-requirejs-example/master/img/working.png)
  
-
-
-## Explanation of what was to for Configure Karma
+## Explanation of what was done to for Configure Karma
 
 The first step is creating our `karma.conf.js`. We can do this in the
 terminal by running:
@@ -124,7 +124,7 @@ tests to be the same folder as the base url we have in `src/main.js`, so
 that relative requires in the source won’t need to change. So, as we
 want our base url to be at `src/`, we need to write `/base/src`.
 
-### Explanation of what was to for Require Each Test File
+### Explanation of what was done to for Require Each Test File
 
 With Karma we don't need to list all test files ourselves as we can
 easily find them from the files specified in `test-main.js`: Karma
@@ -166,7 +166,7 @@ requirejs.config({
 });
 ```
 
-## Explanation of what was to for Using Require.js in tests
+## Explanation of what was done to Use Require.js in the tests
 
 Tests can now be written as regular Require.js modules. We wrap
 everything in `define`, and inside we can use the regular test methods,
